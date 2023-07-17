@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - entry point
- * return: 0 if successful else 1 on error
+ *
+ * Return: 0 if successful else 1 on error
  */
 int main(void)
 {	/*return value will be 0 (success)*/
