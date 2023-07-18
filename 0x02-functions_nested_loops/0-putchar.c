@@ -1,10 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  * Return: 0 if successful otherwise 1 upon error
  */
 int main(void)
 {
-	printf("_putchar\n");
+	write("_putchar\n");
 	return (0);
 }
