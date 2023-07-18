@@ -4,16 +4,15 @@
  * Return: 0 if successful otherwise 1 upon error
  */
 int main(void)
-	char write();
 {
 	_putchar('_');
-	write("p");
-	write("u");
-	write("t");
-	write("c");
-	write("h");
-	write("a");
-	write("r");
-	write("\n");
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
