@@ -4,6 +4,7 @@
  * Return: 0 if successful otherwise 1 upon error
  */
 int main(void)
+	char write();
 {
 	_putchar('_');
 	write("p");
