@@ -5,6 +5,14 @@
  */
 int main(void)
 {
-	write("_putchar\n");
+	write("_");
+	write("p");
+	write("u");
+	write("t");
+	write("c");
+	write("h");
+	write("a");
+	write("r");
+	write("\n");
 	return (0);
 }
