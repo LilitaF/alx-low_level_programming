@@ -6,7 +6,6 @@
  */
 int _islower(int c)
 {
-	char c  = 'f'
 
 	if (c >= 'a' && c <= 'z')
 	{
