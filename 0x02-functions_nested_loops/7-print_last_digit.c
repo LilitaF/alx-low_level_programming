@@ -12,12 +12,12 @@ int print_last_digit(int a)
 
 	if (b < 0)
 	{
-		_putchar(-b + 0);
+		_putchar('b' + 0);
 		return (-b);
 	}
 	else
 	{
-		_putchar(b + 0);
+		_putchar('b' + 0);
 		return (b);
 	}
 	return (0);
