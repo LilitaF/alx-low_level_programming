@@ -4,9 +4,8 @@
  * @a: variable to be compared.
  * Return: 0 if successful otherwise 1 upon error.
  */
-int _abs(void)
+int _abs(int a)
 {
-	int a;
 
 	if (a < 0)
 		return (-a);
