@@ -11,7 +11,7 @@ void print_to_98(int n)
 	{
 		while (n > 98)
 		{
-			printf("%d, ", n--);
+			printf("%d, ", n--);/* print every result of n as it decreases until it reaches 98*/
 		}
 		printf("%d\n", n);
 	}
@@ -19,7 +19,7 @@ void print_to_98(int n)
 	{
 		while (n < 98)
 		{
-			printf("%d, ", n++);
+			printf("%d, ", n++);/* print every result of n as it increases until it reaches 98*/
 		}
 		printf("%d\n", n);
 	}
