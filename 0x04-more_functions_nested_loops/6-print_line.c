@@ -13,8 +13,13 @@ void print_line(int n)
 	else
 	{
 		int y;
+		int z;
 
 		for (y = 0; y <= n; y++)
+		{
+			for (z = 0; z < y; z++)
+			       _putchar(' ');
+		}	
 			_putchar('_');
 		_putchar('\n');
 	}
