@@ -21,7 +21,7 @@ int main(void)
 			printf("FizzBuzz");
 		else
 			printf("%d", e);
-		if
+		if (e == 100)
 			continue;
 		printf(" ");
 	}
