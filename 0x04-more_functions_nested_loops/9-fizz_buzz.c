@@ -5,7 +5,6 @@
  * Fizz - replaces multiples of 3
  * Buzz - replaces multiples of 5
  * FizzBuzz - replaces multiples of both
- * @e: variable
  * Return: always 0
  */
 int main(void)
