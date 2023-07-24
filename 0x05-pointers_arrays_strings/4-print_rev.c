@@ -11,7 +11,7 @@ void print_rev(char *s)
 
 	for (a = 0; s[a] != '\0'; a++)
 		length++;
-	for (a = length; a >= 0; a--)
+	for (a = length - 1; a >= 0; a--)
 		_putchar(s[a]);
 	_putchar('\n');
 }
