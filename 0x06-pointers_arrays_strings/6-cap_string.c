@@ -6,12 +6,28 @@
  */
 char *cap_string(char *s)
 {
-	int a; /*will be used for s*/
+	int a = 0; /*will be used for s*/
 
-	for (a = 0; s[a] != '\0'; a++)
+	while (s[a])
 	{
-		if (s[a] >= 'a' && s[a] <= 'z') /*check condition to continue*/
-			s[a] = s[a] - 32; /* use ascii, count 32 backwards from 'z'*/
+	while (!(s[a] >= 'a' && s[a] <= 'z'))
+	a++;
+	if (s[a - 1] == ' ' ||
+	s[a - 1] == '\t' ||
+	s[a - 1] == '\n' ||
+	s[a - 1] == ',' ||
+	s[a - 1] == ';' ||
+	s[a - 1] == '.' ||
+	s[a - 1] == '!' ||
+	s[a - 1] == '?' ||
+	s[a - 1] == '"' ||
+	s[a - 1] == '(' ||
+	s[a - 1] == ')' ||
+	s[a - 1] == '{' ||
+	s[a - 1] == '}' ||
+	a == 0)
+	s[a] -= 32;
+	a++;
 	}
 	return (s);
 }
