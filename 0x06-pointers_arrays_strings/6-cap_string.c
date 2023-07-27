@@ -12,7 +12,7 @@ char *cap_string(char *s)
 	{
 	while (!(s[a] >= 'a' && s[a] <= 'z'))
 	a++;
-	if (s[a - 1] == ' ' ||
+	if (s[a - 1] == ' ' || /* - 1, to account for NULL*/
 	s[a - 1] == '\t' ||
 	s[a - 1] == '\n' ||
 	s[a - 1] == ',' ||
@@ -24,9 +24,9 @@ char *cap_string(char *s)
 	s[a - 1] == '(' ||
 	s[a - 1] == ')' ||
 	s[a - 1] == '{' ||
-	s[a - 1] == '}' ||
+	s[a - 1] == '}' ||/* all quoted are word separates*/
 	a == 0)
-	s[a] -= 32;
+	s[a] -= 32; /*ascii number subtraction, count 32 backwards from z*/
 	a++;
 	}
 	return (s);
