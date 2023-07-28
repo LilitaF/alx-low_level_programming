@@ -8,17 +8,16 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int a = 0;
+	int a;
 	int b;/*use for length of dest*/
 
-	for (a = 0; dest[a] != '\0'; a++)
-		b++;/* function used to track length dest*/
+	for (b = 0; dest[b] != '\0'; b++)
+		;
+	/* function used to track length dest*/
 
-	for (a = 0; a < n && *src != '\0'; a++)
+	for (a = 0; a < n && src[a] != '\0'; a++)
 	{
-		dest[b + a] = *src;
-		src++;
+		dest[b + a] = src[a];
 	}
-	dest[b + a] = '\0'; /* inserts NULL*/
 	return (dest); /*pointer returned*/
 }
