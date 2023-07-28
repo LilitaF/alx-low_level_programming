@@ -8,7 +8,7 @@ char *rot13(char *str)
 {
 	int a; /* used for str*/
 	char str1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	/*for str2 swap bottom half of uppercase and do the same for the lowercase for a accurate match*/
+	/*for str2 swap bottom half of uppercase, same for the lowercase for match*/
 	char str2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int b; /*used for str1 and str2*/
 
