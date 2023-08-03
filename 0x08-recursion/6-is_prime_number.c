@@ -9,7 +9,7 @@
  */
 int used_to_help(int n, int a)
 {
-       	if (n % a == 0)
+	if (n % a == 0)
 	{
 		return (0);
 	}
