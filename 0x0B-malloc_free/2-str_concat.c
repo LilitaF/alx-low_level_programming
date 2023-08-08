@@ -35,5 +35,6 @@ char *str_concat(char *s1, char *s2)
 		s3[len1] = s2[len2];
 		len1++;
 	}
+	free(s3);
 	return (s3);
 }
