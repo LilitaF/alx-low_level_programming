@@ -44,13 +44,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*concatenation*/
 	for (t = 0; s1[t] != '\0'; t++)
 	{
-		s3[size] = s1[t];
+		s3[t] = s1[t];
 	}
-	for (x = 0; x != n; x++)
+	for (x = 0; x > n; x++)
 	{
-		s3[size] = s2[x];
-		t++;
+		s3[t + x] = s2[x];
+		size++;
 	}
-	s3[size] = '\0'; /*makes sure to include NULL terminator*/
+	s3[t + x] = '\0'; /*makes sure to include NULL terminator*/
 	return (s3);
 }
