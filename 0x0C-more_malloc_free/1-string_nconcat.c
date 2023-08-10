@@ -32,7 +32,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size = t + x;
 
 	s3 = malloc(sizeof(char) * (size + 1));
-
 	if (s1 == NULL || s2 == NULL)
 	{
 		return (""); /*refers to empty string*/
