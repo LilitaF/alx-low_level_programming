@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		x++;/*length s2*/
 	}
-	if (n > x)
+	if (n >= x)
 	{
 		n = x;
 	}
