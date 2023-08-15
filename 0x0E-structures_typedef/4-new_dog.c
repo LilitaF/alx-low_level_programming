@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	/*get the exact size +1 for NULL terminator*/
 	nwd->name = malloc(sizeof(name) + 1);
-	if (nwd->name == NULL)
+	if (nwd->name == 0)
 	{
 		free(nwd);
 		return (NULL);
@@ -38,12 +38,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		nwd->name[a] = name[a];
 	}
-	nwd->name = '\0';
 	for (a = 0; owner[a]; a++)
 	{
 		nwd->owner[a] = owner[a];
 	}
-	nwd->age = age;
+	nwd->name = '\0';
+        nwd->age = age;
 	nwd->owner = '\0';
 
 	return (nwd);
