@@ -10,7 +10,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int a;
+	int a = 0;
 	dog_t *nwd; /*new_dog abbr.*/
 
 	nwd = malloc(sizeof(dog_t));
@@ -34,16 +34,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/*copy the contents of name and owner into the new subs*/
-	for (a = 0; name[a]; a++)
+	while (name[a] != '\0')
 	{
 		nwd->name[a] = name[a];
+		a++;
 	}
 	for (a = 0; owner[a]; a++)
 	{
 		nwd->owner[a] = owner[a];
 	}
 	nwd->name = '\0';
-        nwd->age = age;
+	nwd->age = age;
 	nwd->owner = '\0';
 
 	return (nwd);
