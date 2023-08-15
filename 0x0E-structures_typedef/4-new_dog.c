@@ -29,23 +29,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	nwd->name = malloc(nlen + 1);/*+1 for NULL terminator*/
 	if (!nwd->name)
+	{
 		free(nwd);
 		return (0);
+	}
 	nwd->owner = malloc(olen + 1);/*+1 for NULL terminator*/
 	if (nwd->owner == NULL)
+	{
 		free(nwd->name);
 		free(nwd);
 		return (NULL);
+	}
 	/*copy the contents of name and owner into the new subs*/
 	for (a = 0; a < nlen; a++)
-	{
 		nwd->name[a] = name[a];
-	}
 	nwd->name[nlen] = '\0';
 	for (a = 0; a < olen; a++)
-	{
 		nwd->owner[a] = owner[a];
-	}
 	nwd->owner[olen] = '\0';
 	nwd->age = age;
 	return (nwd);
