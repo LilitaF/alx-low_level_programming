@@ -12,21 +12,35 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	int a = 0;
 	dog_t *nwd; /*new_dog abbr.*/
+	int nlen;
+	int olen;
 
 	nwd = malloc(sizeof(dog_t));
 	if (nwd == NULL)
 	{
 		return (NULL);
 	}
-	/*get the exact size +1 for NULL terminator*/
-	nwd->name = malloc(sizeof(name) + 1);
-	if (nwd->name == 0)
+	/*get length of name*/
+	nlen = 0;
+	while (name[nlen] != '\0')
+	{
+		nlen++;
+	}
+	/*get length of owner*/
+	olen = 0;
+	while (owner[olen] != '\0')
+	{
+		olen++;
+	}
+	/*+1 for NULL terminator*/
+	nwd->name = malloc(nlen + 1);
+	if (!nwd->name)
 	{
 		free(nwd);
-		return (NULL);
+		return (0);
 	}
-	/*get the exact size of owner includeing NULL terminator*/
-	nwd->owner = malloc(sizeof(owner) + 1);
+	/*+1 to include NULL terminator*/
+	nwd->owner = malloc(olen + 1);
 	if (nwd->owner == NULL)
 	{
 		free(nwd->name);
@@ -34,18 +48,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/*copy the contents of name and owner into the new subs*/
-	while (name[a] != '\0')
+	for (a = 0; a < nlen; a++)
 	{
 		nwd->name[a] = name[a];
-		a++;
 	}
-	for (a = 0; owner[a]; a++)
+	nwd->name[nlen] = '\0';
+	for (a = 0; a < olen; a++)
 	{
 		nwd->owner[a] = owner[a];
 	}
-	nwd->name = '\0';
+	nwd->owner[olen] = '\0';
+
 	nwd->age = age;
-	nwd->owner = '\0';
 
 	return (nwd);
 }
