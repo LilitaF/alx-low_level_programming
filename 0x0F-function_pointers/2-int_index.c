@@ -4,7 +4,7 @@
  * @size: number of elements in array
  * @array: contains integer searched for
  * @cmp: pointer to the function to be used to compare values
- * Return: 1 if successful
+ * Return: -1 if no matchig element is found
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -23,5 +23,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 		}
 		a++;
 	}
-	return (1);
+	return (-1);
 }
