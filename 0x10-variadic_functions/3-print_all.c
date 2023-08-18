@@ -37,8 +37,7 @@ void print_all(const char * const format, ...)
 				s = va_arg(flist, char *);
 				if (s == NULL)
 					printf("%s(nil)", com);
-				else
-					printf("%s%s", com, s);
+				printf("%s%s", com, s);
 				break;
 		}
 		com = ", ";
