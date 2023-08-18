@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 				printf("%s%f", com, f);
 				break;
 			case 's':
-			3-print_all.c	s = va_arg(flist, char *);
+				s = va_arg(flist, char *);
 				if (s == NULL)
 					printf("%s(nil)", com);
 				else
