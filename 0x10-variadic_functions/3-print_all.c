@@ -34,10 +34,11 @@ void print_all(const char * const format, ...)
 				printf("%s%f", com, f);
 				break;
 			case 's':
-				s = va_arg(flist, char *);
+			3-print_all.c	s = va_arg(flist, char *);
 				if (s == NULL)
-					printf("(nil)");
-				printf("%s%s", com, s);
+					printf("%s(nil)", com);
+				else
+					printf("%s%s", com, s);
 				break;
 		}
 		com = ", ";
