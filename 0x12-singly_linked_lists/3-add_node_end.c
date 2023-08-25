@@ -30,6 +30,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*if duplication has failed*/
 	if (new_end_node->str == NULL)
 	{
+		free(new_end_node);
 		return (NULL);
 	}
 
