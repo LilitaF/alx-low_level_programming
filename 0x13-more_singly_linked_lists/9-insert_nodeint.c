@@ -27,21 +27,23 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	insert_node->n = n;
-
 	if (idx == 0)
 	{
 		insert_node->next = *head;
 		*head = insert_node;
 		return (insert_node);
 	}
-
 	while (a < idx - 1)
 	{
 		curr = curr->next;
 		a++;
 	}
+	if (curr == NULL)
+	{
+		free(insert_node);
+		return (NULL);
+	}
 	insert_node->next = curr->next;
 	curr->next = insert_node;
-
 	return (insert_node);
 }
