@@ -11,17 +11,20 @@ int main(int argc, char *argv[])
 {
 	int num1 = atoi(argv[1]);
 	int num2 = atoi(argv[2]);
-	int num3;
+	int num3 = num1 * num2;
 	int a;
+	int num;
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (a = 1; a < argc; a++)
+
+	for (a = 3; a < argc; a++)
 	{
-		num3 = num1 * num2;
+		num = atoi(argv[a]);
+		num3 = num3 * num;
 	}
 
 	printf("%d\n", num3);
