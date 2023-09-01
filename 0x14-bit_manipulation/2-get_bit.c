@@ -17,7 +17,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		bit_mask = 1UL << index;/* UL=unsigned long*/
 		iso = (n & bit_mask) != 0;
-		return iso;
+		return (iso);
 	}
 	else
 	{
