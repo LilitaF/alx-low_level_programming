@@ -12,7 +12,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	index_max = sizeof(unsigned long int) * 8 - 1;
 	if (index <= index_max)
 	{
-		bit_mask = ~( 1UL << index);
+		bit_mask = ~(1UL << index);
 		*n = *n & bit_mask;
 		return (1);
 	}
