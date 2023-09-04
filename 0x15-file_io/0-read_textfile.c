@@ -22,7 +22,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (fd == -1)
 		return (0);
-
 	while (letters > 0)
 	{
 		read_return = read(fd, buffer, sizeof(buffer));
@@ -34,7 +33,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (read_return == 0)
 			break; /*indicates end of file*/
 
-		printed_bytes = (letters < (size_t)read_return) ? (ssize_t)letters : read_return;
+		printed_bytes = (letters < (size_t)read_return) ?
+			(ssize_t)letters : read_return;
 		written_bytes = write(STDOUT_FILENO, buffer, printed_bytes);
 
 		if (written_bytes == -1 || written_bytes != printed_bytes)
