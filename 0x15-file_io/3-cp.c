@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 			exit_error(99, "Error: Can't write to %s\n", file_to);
 	}
 	if (read_bytes == -1)
-		exit_error(99, "Error: Can't write to '%s'\n", file_from);
+		exit_error(98, "Error: Can't write to '%s'\n", file_from);
 	if (close(fd1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
