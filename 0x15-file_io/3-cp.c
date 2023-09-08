@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	{
 		exit_error(98, "Error: Can't read from file %s\n", file_from);
 	}
-	fd2 = open(argv[2], O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP
 			| S_IWGRP | S_IROTH);
 	if (fd2 == -1)
 	{
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 	{
 		written_bytes = write(fd2, buffer, read_bytes);
 		if (written_bytes != read_bytes)
-			exit_error(99, "Error: Can't write from file %s\n", file_to);
+			exit_error(99, "Error: Can't write to %s\n", file_to);
 	}
 	if (read_bytes == -1)
-		exit_error(99, "Error: Can't write from file '%s'\n", file_from);
+		exit_error(99, "Error: Can't write to '%s'\n", file_from);
 	if (close(fd1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
