@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	while ((read_bytes = read(fd1, buffer, BUFFSIZE)) > 0)
 	{
 		written_bytes = write(fd2, buffer, read_bytes);
-		if (written_bytes == -1)
+		if (written_bytes != read_bytes)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_to);
 			exit(99);
