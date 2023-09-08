@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	{
 		exit_error(98, "Error: Can't read from file %s\n", file_from);
 	}
-	fd2 = open(argv[2], O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP
+	fd2 = open(argv[2], O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP
 			| S_IWGRP | S_IROTH);
 	if (fd2 == -1)
 	{
