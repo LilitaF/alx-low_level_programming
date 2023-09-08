@@ -44,15 +44,10 @@ int main(int argc, char *argv[])
 	{
 		written_bytes = write(fd2, buffer, read_bytes);
 		if (written_bytes != read_bytes)
-		{
 			exit_error(99, "Error: Can't write from file %s\n", file_to);
-		}
 	}
 	if (read_bytes == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file '%s'\n", file_from);
-		exit(99);
-	}
+		exit_error(99, "Error: Can't write from file '%s'\n", file_from);
 	if (close(fd1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
