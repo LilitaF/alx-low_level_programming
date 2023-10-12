@@ -8,7 +8,8 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *temp;
-	while(head)
+
+	while (head)
 	{
 		/*store current node into temp variable*/
 		temp = head;
